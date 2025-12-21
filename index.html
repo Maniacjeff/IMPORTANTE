@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+h1, h2, h3, p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.galeria {
+  margin-top: 15px;
+}
+
+.cardapio {
+  margin-bottom: 20px;
+}
+
     body {
       background-color: #fff3e6;
       font-family: Arial, sans-serif;
@@ -68,7 +96,27 @@
   box-shadow: 0 0 5px #ccc;
     }
 
+.cardapio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cardapio .item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #ddd;
+}
+
+.cardapio h3 {
+  color: #d2691e;
+  margin-bottom: 5px;
+}
+
 @media (max-width: 600px) {
+}
   h1 {
     font-size: 24px;
   }
@@ -109,6 +157,35 @@
     </ul>
 
     <h2>Nossos produtos</h2>
+
+<h2>Cardápio</h2>
+
+<div class="cardapio">
+
+  <div class="item">
+    <h3>Bolos caseiros</h3>
+    <p>Chocolate, cenoura, laranja, milho, coco</p>
+  </div>
+
+  <div class="item">
+    <h3>Bolos de aniversário</h3>
+    <p>Recheios variados, decoração personalizada</p>
+  </div>
+
+  <div class="item">
+    <h3>Bolo no pote</h3>
+    <p>Sabores tradicionais e especiais</p>
+  </div>
+
+  <div class="item">
+    <h3>Doces tradicionais</h3>
+    <p>Brigadeiro, beijinho, cajuzinho</p>
+  </div>
+
+  <div class="item">
+    <h3>Doces camuflados</h3>
+    <p>Sabores diversos, consulte disponibilidade</p>
+  </div>
 
     <div class="galeria">
       <img src="imagens0/camufldao1.jpeg" alt="Doce camuflado">
