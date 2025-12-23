@@ -193,6 +193,36 @@
   color: #333;
   font-size: 16px;
 }
+/* DESTAQUE REAL - BOLO INTEGRAL */
+.cardapio .item.destaque {
+  background: linear-gradient(135deg, #fff3e6, #ffe0c2);
+  border: 2px solid #d2691e;
+  position: relative;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+  transform: scale(1.03);
+}
+
+.cardapio .item.destaque::before {
+  content: "ESPECIAL";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #d2691e;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.cardapio .item.destaque h3 {
+  color: #8b4513;
+}
+
+.cardapio .item.destaque strong {
+  font-size: 18px;
+  color: #000;
+}
 
   </style>
 </head>
@@ -264,7 +294,14 @@
         <p>Sabores variados</p>
         <strong>R$ 8,00 (unid.)</strong>
       </div>
-    </div>
+
+<div class="item destaque">
+  <h3>🍎 Bolo integral de maçã</h3>
+  <p>Opção integral, ideal para quem busca sabor e equilíbrio</p>
+  <strong>R$ 70,00 / kg</strong>
+</div>
+
+</div>
 
     <div class="galeria">
       <img src="imagens0/bolo1.jpeg">
