@@ -5,39 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-h1, h2, h3, p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.galeria {
-  margin-top: 15px;
-}
-
-.cardapio {
-  margin-bottom: 20px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
     body {
+      margin: 0;
       background-color: #fff3e6;
       font-family: Arial, sans-serif;
     }
 
+    /* TOPO */
+    .topo {
+      background-image: url("imagens0/bolo1.jpeg");
+      background-size: cover;
+      background-position: center;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .texto-topo {
+      background: rgba(0,0,0,0.65);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      max-width: 90%;
+    }
+
+    .texto-topo h1 {
+      margin-top: 0;
+      color: #ffb347;
+    }
+
+    .btn-topo {
+      display: inline-block;
+      margin-top: 15px;
+      background: #25d366;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* CONTAINER */
     .container {
       width: 90%;
       max-width: 600px;
@@ -48,24 +62,42 @@ h1, h2, h3, p {
       box-shadow: 0 0 10px #ccc;
     }
 
-    h1 {
-      color: #d2691e;
-      text-align: center;
-    }
-
-    .slogan {
-      text-align: center;
-      font-style: italic;
-    }
-
     h2 {
       color: #8b4513;
     }
 
-    ul {
-      padding-left: 20px;
+    /* CARDÁPIO */
+    .cardapio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
     }
 
+    .cardapio .item {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ddd;
+    }
+
+    /* GALERIA */
+    .galeria {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #ccc;
+    }
+
+    /* WHATSAPP */
     .whatsapp {
       display: block;
       text-align: center;
@@ -78,88 +110,88 @@ h1, h2, h3, p {
       font-weight: bold;
     }
 
-    .whatsapp:hover {
-      background: #1ebc59;
+    /* DEPOIMENTOS */
+    .depoimentos {
+      display: grid;
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    .galeria {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
+    .depoimento {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ddd;
     }
 
-  .galeria img {
-  width: 100%;
-  max-width: 180px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #ccc;
+    .depoimento p {
+      font-style: italic;
     }
 
+    .depoimento span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* RODAPÉ */
+    .rodape {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .topo {
+        height: 260px;
+      }
+
+      .texto-topo h1 {
+        font-size: 24px;
+      }
+    }
+
+/* CARDÁPIO */
 .cardapio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 25px;
 }
 
 .cardapio .item {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px #ddd;
+  background: #fff8f0;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  border-left: 6px solid #d2691e;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardapio .item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
 }
 
 .cardapio h3 {
+  margin-top: 0;
   color: #d2691e;
-  margin-bottom: 5px;
 }
 
-@media (max-width: 600px) {
-}
-  h1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  .container {
-    padding: 15px;
-  }
-
-.rodape {
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  font-size: 14px;
-  color: #666;
+.cardapio p {
+  margin: 6px 0;
 }
 
-.depoimentos {
-  display: grid;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.depoimento {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px #ddd;
-}
-
-.depoimento p {
-  font-style: italic;
-}
-
-.depoimento span {
+.cardapio strong {
   display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #555;
+  margin-top: 8px;
+  color: #333;
+  font-size: 16px;
 }
 
   </style>
@@ -167,20 +199,29 @@ h1, h2, h3, p {
 
 <body>
 
+  <!-- TOPO -->
+  <header class="topo">
+    <div class="texto-topo">
+      <h1>Caseirinhos da Ninha</h1>
+      <p>
+        Bolos e doces caseiros feitos com carinho para adoçar seus momentos especiais.
+        Encomendas sob medida, com sabores tradicionais e aquele gostinho de casa.
+      </p>
+      <a class="btn-topo" href="https://wa.me/5548996986051" target="_blank">
+        Fazer pedido
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
   <div class="container">
-    <h1>Caseirinhos da Ninha</h1>
-    <p class="slogan">
-Bolos e doces caseiros feitos com carinho para adoçar seus momentos especiais.
-Encomendas sob medida, com sabores tradicionais e aquele gostinho de casa.
-</p>
 
-<h2>Sobre a Ninha</h2>
-<p>
-A Caseirinhos da Ninha nasceu do amor pela cozinha e pelas receitas de família.
-Cada bolo e doce é preparado com ingredientes selecionados, cuidado em cada detalhe
-e muito carinho, para adoçar momentos especiais como aniversários, encontros e celebrações.
-</p>
-
+    <h2>Sobre a Ninha</h2>
+    <p>
+      A Caseirinhos da Ninha nasceu do amor pela cozinha e pelas receitas de família.
+      Cada bolo e doce é preparado com ingredientes selecionados e muito carinho,
+      para adoçar momentos especiais.
+    </p>
 
     <h2>O que vendemos</h2>
     <ul>
@@ -191,113 +232,71 @@ e muito carinho, para adoçar momentos especiais como aniversários, encontros e
       <li>Doces camuflados</li>
     </ul>
 
+    <h2>Cardápio</h2>
 
-<h2>Cardápio</h2>
+    <div class="cardapio">
+      <div class="item">
+        <h3>Bolos caseiros</h3>
+        <p>Chocolate, cenoura, laranja, milho, coco</p>
+        <strong>A partir de R$ 30,00</strong>
+      </div>
 
-<div class="cardapio">
+      <div class="item">
+        <h3>Bolos de aniversário</h3>
+        <p>Recheios variados e decoração personalizada</p>
+        <strong>Valores sob consulta</strong>
+      </div>
 
-  <div class="item">
-    <h3>Bolos caseiros</h3>
-    <p>Chocolate, cenoura, laranja, milho, coco</p>
-    <p><strong>A partir de R$ 30,00</strong></p>
-  </div>
+      <div class="item">
+        <h3>Bolo no pote</h3>
+        <p>Sabores tradicionais e especiais</p>
+        <strong>R$ 12,00</strong>
+      </div>
 
-  <div class="item">
-    <h3>Bolos de aniversário</h3>
-    <p>Recheios variados e decoração personalizada</p>
-    <p><strong>Valores sob consulta</strong></p>
-  </div>
+      <div class="item">
+        <h3>Doces tradicionais</h3>
+        <p>Brigadeiro, beijinho, cajuzinho</p>
+        <strong>R$ 1,50 (unid.)</strong>
+      </div>
 
-  <div class="item">
-    <h3>Bolo no pote</h3>
-    <p>Sabores tradicionais e especiais</p>
-    <p><strong>R$ 12,00</strong></p>
-  </div>
-
-  <div class="item">
-    <h3>Doces tradicionais</h3>
-    <p>Brigadeiro, beijinho, cajuzinho</p>
-    <p><strong>R$ 1,50 (unid.)</strong></p>
-  </div>
-
-  <div class="item">
-    <h3>Doces camuflados</h3>
-    <p>Sabores variados</p>
-    <p><strong>R$ 8,00 (unid.)</strong></p>
-  </div>
-
-</div>
-
-<p style="text-align:center; font-size:14px; margin-top:10px;">
-  💡 Valores podem variar conforme sabor, tamanho e personalização.
-  Para um orçamento certinho, fale com a gente no WhatsApp.
-</p>
-
-    <div class="galeria">
-      <img src="imagens0/camufldao1.jpeg" alt="Doce camuflado">
-      <img src="imagens0/bolo1.jpeg" alt="Bolo recheado">
-      <img src="imagens0/tradicionais1.jpeg" alt="Doces tradicionais">
-      <img src="imagens0/bolopote1.jpeg" alt="Bolo no pote">
+      <div class="item">
+        <h3>Doces camuflados</h3>
+        <p>Sabores variados</p>
+        <strong>R$ 8,00 (unid.)</strong>
+      </div>
     </div>
 
-<p style="text-align:center; font-size:14px;">
-✔ Produção artesanal  
-✔ Ingredientes selecionados  
-✔ Atendimento com carinho  
-</p>
+    <div class="galeria">
+      <img src="imagens0/bolo1.jpeg">
+      <img src="imagens0/bolopote1.jpeg">
+      <img src="imagens0/tradicionais1.jpeg">
+      <img src="imagens0/camufldao1.jpeg">
+    </div>
 
-    <h2>Contato</h2>
-    <p style="text-align:center; font-weight:bold;">
-📲 Faça sua encomenda com a gente pelo WhatsApp.
-</p>
-
-
-    <a class="whatsapp"
-       href="https://wa.me/5548996986051"
-       target="_blank">
-       Fazer pedido
+    <a class="whatsapp" href="https://wa.me/5548996986051" target="_blank">
+      Fazer pedido pelo WhatsApp
     </a>
 
+    <h2>O que nossos clientes dizem</h2>
 
-<h2>O que nossos clientes dizem</h2>
+    <div class="depoimentos">
+      <div class="depoimento">
+        <p>⭐⭐⭐⭐⭐<br>Bolos deliciosos e atendimento maravilhoso.</p>
+        <span>– Luciana, Criciúma</span>
+      </div>
 
-<div class="depoimentos">
+      <div class="depoimento">
+        <p>⭐⭐⭐⭐⭐<br>Doces incríveis, sempre caprichados.</p>
+        <span>– Marcos, Içara</span>
+      </div>
+    </div>
 
-  <div class="depoimento">
-    <p>
-      ⭐⭐⭐⭐⭐<br>
-      “Bolos deliciosos, sempre fresquinhos e feitos com muito carinho.
-      Encomendo sempre para aniversários da família!”
-    </p>
-    <span>– Luciana, Criciúma</span>
+    <footer class="rodape">
+      <p>© 2025 Caseirinhos da Ninha</p>
+      <p>Criciúma - SC</p>
+    </footer>
+
   </div>
-
-  <div class="depoimento">
-    <p>
-      ⭐⭐⭐⭐⭐<br>
-      “Os doces são maravilhosos, bem caprichados e com ótimo atendimento.
-      Recomendo muito!”
-    </p>
-    <span>– Marcos, Içara</span>
-  </div>
-
-  <div class="depoimento">
-    <p>
-      ⭐⭐⭐⭐⭐<br>
-      “Bolo no pote incrível, sabor de caseiro mesmo.
-      Dá pra sentir o cuidado em cada detalhe.”
-    </p>
-    <span>– Juliana, Forquilhinha</span>
-  </div>
-
-</div>
-
-  
-<footer class="rodape">
-  <p>© 2025 Caseirinhos da Ninha</p>
-  <p>Criciúma - SC</p>
-  <p>Encomendas pelo WhatsApp</p>
-</footer>
 
 </body>
 </html>
